@@ -10,6 +10,13 @@ public class DestroyGlass : MonoBehaviour
 
     // Gitdas
 
+    // Start is called before the first frame update
+    
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 
     private void OnTriggerEnter(Collider col)
     {
