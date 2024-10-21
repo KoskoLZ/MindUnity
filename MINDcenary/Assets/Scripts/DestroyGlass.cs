@@ -8,7 +8,7 @@ public class DestroyGlass : MonoBehaviour
 {
     public EventReference soundEvent;  
 
-    // Git
+    // Gitdas
 
 
     private void OnTriggerEnter(Collider col)
