@@ -14,7 +14,7 @@ public class DestroyGlass : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.log("git");
+        
     }
 
     private void OnTriggerEnter(Collider col)
