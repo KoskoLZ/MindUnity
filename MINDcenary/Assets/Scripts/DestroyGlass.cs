@@ -8,11 +8,7 @@ public class DestroyGlass : MonoBehaviour
 {
     public EventReference soundEvent;  
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -21,6 +17,7 @@ public class DestroyGlass : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
+        // github-marcelo
        Destroy(this.gameObject);
        SoundGlassBreak();
     }
