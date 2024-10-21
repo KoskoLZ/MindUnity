@@ -20,7 +20,7 @@ public class DestroyGlass : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        // github-marcelo
+        // github-marcelo1
        Destroy(this.gameObject);
        SoundGlassBreak();
     }
