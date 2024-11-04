@@ -11,6 +11,7 @@ public class SafeScript : MonoBehaviour
 
     public float rotacaoZ;
     int fechaduraatual;
+    public int quantFechaduras;
 
     public float velocidadeRotacao = 50f;
 
@@ -38,15 +39,38 @@ public class SafeScript : MonoBehaviour
         {
             Debug.LogError("RectTransform não atribuído.");
         }
-            rotacaoZ = rectTransform.eulerAngles.z - 180;
-        if(rotacaoZ == fechaduras[fechaduraatual] || rotacaoZ == (fechaduras[fechaduraatual] - 5) || rotacaoZ == (fechaduras[fechaduraatual] + 5))
+        
+        rotacaoZ = rectTransform.eulerAngles.z - 180;
+        quantFechaduras = fechaduras.Length;
+        if(margin(fechaduras[fechaduraatual] - 1, fechaduras[fechaduraatual] + 1, rotacaoZ))
         {
             fechadurasabertas[fechaduraatual] = true;
+
             if(fechadurasabertas[fechaduraatual])
             {
                 fechaduraatual += 1;
+                if(fechaduraatual == quantFechaduras)
+                {
+                for (int i = 0; i < quantFechaduras; i++)
+                {
+                    if(fechadurasabertas[i])
+                    {
+                         Debug.Log("TODAS ABERTAS");
+                    }
+                }
+                }
             }
+
+            
         }
+
+        
+
+    }
+
+    bool margin( float min, float max, float n)
+    {
+	    return ( n>min && n< max);
     }
 
 }

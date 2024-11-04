@@ -22561,9 +22561,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7614a3a8fde56a64e9059e382758a9fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   speed: 3
-  yVelocity: -9.81
+  gravity: -9.81
+  jumpH: 3
+  x: 0
+  z: 0
+  y: 0
   speedrun: 0
+  isGrounded: 0
+  GroundCheck: {fileID: 0}
+  gorundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  flashlight: {fileID: 0}
 --- !u!143 &1280774740
 CharacterController:
   m_ObjectHideFlags: 0
